@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TanstackProvider } from "@/components/providers/tanstack-provider";
-
+import { Toaster } from "@/components/ui/sonner"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,7 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TanstackProvider>{children}</TanstackProvider>
+        <TanstackProvider>
+          <div className="px-10">
+            {children}
+          </div>
+        </TanstackProvider>
+        <Toaster
+          position="top-center"
+          richColors
+          closeButton
+          theme="system"
+        />
       </body>
     </html>
   );
