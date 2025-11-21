@@ -64,7 +64,7 @@ export function ActionsCell({ product }: ActionsCellProps) {
         <>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="h-8 w-8 p-0">
+                    <Button className="h-8 w-8 p-0 bg-red-800 cursor-pointer hover:bg-red-700 text-white">
                         <span className="sr-only">Open menu</span>
                         <MoreHorizontal className="h-4 w-4" />
                     </Button>
