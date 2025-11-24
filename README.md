@@ -1,89 +1,151 @@
-# 🧪 Desafio Técnico – Front-End (Next.js)
+# 🛍️ Products CRUD - Next.js
 
-## 🎯 Objetivo
+A modern web application built with Next.js and TypeScript that implements a complete CRUD (Create, Read, Update, Delete) system for products using the [FakeStore API](https://fakestoreapi.com/).
 
-Criar uma aplicação web com **Next.js** e **TypeScript** que implemente um **CRUD de produtos**, utilizando a [FakeStore API](https://fakestoreapi.com/).
+## 🚀 Features
 
----
+- ✅ **Product Listing** - Browse all products with a beautiful data table
+- ✅ **Product Details** - View detailed information about each product
+- ✅ **Create Product** - Add new products with form validation
+- ✅ **Update Product** - Edit existing products
+- ✅ **Delete Product** - Remove products with confirmation
+- ✅ **Dark/Light Mode** - Toggle between themes
+- ✅ **Responsive Design** - Works on mobile and desktop
+- ✅ **Search & Filter** - Search products and filter by category
+- ✅ **Sorting** - Sort by any column in the data table
 
-## 📦 API a ser utilizada
+## 🛠️ Tech Stack
 
-Use os seguintes endpoints da FakeStore API:
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Data Fetching:** [TanStack Query](https://tanstack.com/query)
+- **Form Management:** [React Hook Form](https://react-hook-form.com/)
+- **Validation:** [Zod](https://zod.dev/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Notifications:** [Sonner](https://sonner.emilkowal.ski/)
 
-- `GET /products` – listar produtos  
-- `GET /products/:id` – visualizar detalhes  
-- `POST /products` – criar novo produto  
-- `PUT /products/:id` – editar produto  
-- `DELETE /products/:id` – deletar produto  
+## 📋 Prerequisites
 
-> ⚠️ A API é pública e os dados não são persistidos de verdade.
+Before you begin, ensure you have installed:
 
----
+- **Node.js** 18.x or higher
+- **pnpm** (recommended) or npm/yarn
 
-## ✅ Funcionalidades
+## 🏁 Getting Started
 
-### Obrigatórias
-- **Listagem** de produtos
-- **Visualização** de um produto
-- **Criação** de novo produto
-- **Edição** de produto existente
-- **Exclusão** de produto
+### 1. Clone the repository
 
-### Não obrigatórias
-- Tela de **login fake** com e-mail e senha fixos
-- **Menu lateral (sidebar)** responsivo
-- Layout **totalmente responsivo** (mobile e desktop)
+```bash
+git clone https://github.com/AndreGM/test-nextjs.git
+cd test-nextjs
+```
 
----
+### 2. Install dependencies
 
-## 🔧 Requisitos técnicos obrigatórios
+```bash
+pnpm install
+```
 
-- [x] Next.js com TypeScript
-- [x] React Hooks
-- [x] Integração com a FakeStore API
-- [x] Tailwind CSS para estilização
-- [x] Código bem organizado e componentizado
-- [x] Git com histórico de commits claros
-- [x] README com instruções de como rodar
+### 3. Run the development server
 
----
+```bash
+pnpm dev
+```
 
-## 🌟 Diferenciais (pontos positivos)
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
-- Uso do **shadcn-ui**
-- Deploy funcional na **Vercel**
-- Feedbacks de carregamento, sucesso e erro
-- Testes com **Jest** ou **React Testing Library**
+## 📜 Available Scripts
 
----
+```bash
+# Start development server
+pnpm dev
 
-## 📥 Como iniciar
+# Build for production
+pnpm build
 
-1. Faça um **fork** deste repositório.
-2. Trabalhe no seu fork normalmente, fazendo commits e push a cada evolução.
-3. Mantenha o repositório **público** para avaliação.
+# Start production server
+pnpm start
 
----
+# Run linter
+pnpm lint
 
-## 📤 Entrega
+# Clean cache and reinstall dependencies
+pnpm store prune
+rm -rf node_modules
+pnpm install
+```
 
-1. Envie o **link do seu fork** para a equipe de recrutamento.
-2. Certifique-se de que o `README.md` inclui:
-   - ✅ Como rodar o projeto localmente
-   - ✅ Link para o deploy (caso tenha publicado)
+## 🌐 API Endpoints Used
 
----
+The application integrates with [FakeStore API](https://fakestoreapi.com/):
 
-## 💡 Avaliação
+- `GET /products` - List all products
+- `GET /products/:id` - Get product details
+- `POST /products` - Create new product
+- `PUT /products/:id` - Update product
+- `DELETE /products/:id` - Delete product
 
-Serão avaliados os seguintes pontos:
+> ⚠️ **Note:** The FakeStore API is public and doesn't persist data. Changes are simulated but not saved permanently.
 
-- Qualidade da interface (UX/UI)
-- Qualidade do código e clareza
-- Organização das pastas e boas práticas
-- Responsividade e experiência do usuário
-- Uso correto de Git (commits, mensagens e histórico)
+## 📁 Project Structure
 
----
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── products/          # Products pages
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── forms/            # Form components
+│   ├── providers/        # Context providers
+│   └── ui/               # shadcn/ui components
+├── http/                  # API integration
+│   └── schemas/          # Zod schemas
+└── lib/                   # Utilities
+```
 
-Boa sorte e bom código! 🚀
+## 🎨 Features in Detail
+
+### Data Table
+- Sortable columns
+- Search functionality
+- Category filtering
+- Pagination
+- Row actions (View, Edit, Delete)
+
+### Forms
+- Client-side validation with Zod
+- Real-time error messages
+- Loading states
+- Success/error notifications
+
+### Theme System
+- Light mode
+- Dark mode
+- System preference detection
+- Persistent theme selection
+
+## 🚀 Deployment
+
+The easiest way to deploy this Next.js app is using [Vercel](https://vercel.com):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AndreGM/test-nextjs)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+**Andre GM**
+
+- GitHub: [@AndreGM](https://github.com/AndreGM)
+- Repository: [test-nextjs](https://github.com/AndreGM/test-nextjs)
+
+## 🙏 Acknowledgments
+
+- [FakeStore API](https://fakestoreapi.com/) for providing the product data
+- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
+- [Vercel](https://vercel.com/) for hosting platform
