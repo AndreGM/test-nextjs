@@ -2,6 +2,10 @@
 
 A modern web application built with Next.js and TypeScript that implements a complete CRUD (Create, Read, Update, Delete) system for products using the [FakeStore API](https://fakestoreapi.com/).
 
+## 🌐 Live Demo
+
+Check out the live application: [https://testedevcrud.netlify.app/products](https://testedevcrud.netlify.app/products)
+
 ## 🚀 Features
 
 - ✅ **Product Listing** - Browse all products with a beautiful data table
@@ -71,11 +75,24 @@ pnpm start
 # Run linter
 pnpm lint
 
+# Run tests with UI
+pnpm test:ui
+
 # Clean cache and reinstall dependencies
 pnpm store prune
 rm -rf node_modules
 pnpm install
 ```
+
+## 🧪 Testing
+
+Run tests with interactive UI:
+
+```bash
+pnpm test:ui
+```
+
+This will open the test runner interface where you can view and run all tests.
 
 ## 🌐 API Endpoints Used
 
@@ -127,12 +144,6 @@ src/
 - System preference detection
 - Persistent theme selection
 
-## 🚀 Deployment
-
-The easiest way to deploy this Next.js app is using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AndreGM/test-nextjs)
-
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -143,9 +154,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - GitHub: [@AndreGM](https://github.com/AndreGM)
 - Repository: [test-nextjs](https://github.com/AndreGM/test-nextjs)
+- Live Demo: [testedevcrud.netlify.app](https://testedevcrud.netlify.app/products)
 
 ## 🙏 Acknowledgments
 
 - [FakeStore API](https://fakestoreapi.com/) for providing the product data
 - [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [Vercel](https://vercel.com/) for hosting platform
+- [Netlify](https://netlify.com/) for hosting platform
